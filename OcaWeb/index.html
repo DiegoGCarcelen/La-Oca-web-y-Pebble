@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<!--
+	Phase Shift by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>El Juego de la OCA</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/cliente-juego.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript>
+
+		<style type="text/css">
+			.sobre {
+ 				position:relative;
+ 				top:-100px;
+ 				left:450px;
+ 				border:none;
+			}
+		</style>
+
+
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div class="wrapper style1">
+
+				<!-- Header -->
+					<div id="header" class="skel-panels-fixed">
+						<div id="logo">
+							<h1><a href="index.html">El Juego de la OCA</a></h1>
+							<span class="tag">Procesos de Ingeniería de Software</span>
+						</div>
+						<nav id="nav">
+							<ul>
+								<li class="active"><a href="index.html">Nueva partida</a></li>
+							</ul>
+						</nav>
+					</div>
+	
+
+<!--		<div id="extra" style="float:left">
+			<div class="container">
+				<div class="row no-collapse-1">
+					<section class="4u"> <a href="#" class="image featured"><img src="images/pic01.jpg" alt=""></a>
+						<div class="box" >
+							<p>De oca a oca y tiro porque me toca</p>
+							<a href="#" class="button">Read More</a>
+						 </div>
+					</section>
+				</div>
+			</div>
+		</div>
+-->
+
+
+				<!-- Banner -->
+					<div id="banner" class="container">
+
+						<div id="partida"></div>
+
+						<!-- Botón para probar movimiento de ficha
+						<button id="moverTEST" onclick="moverFichaTest()">
+							Mover ficha TEST
+						</button>
+						-->
+
+						<div>
+							<section>
+								<img src="images/tablero.png" z-index="0" />
+							</section>
+						</div>
+
+						<div>
+							<img id="rojo"
+								style="position:relative;top:-100px;left:450px;border:none" 
+								width="50" height="50"  src="images/fichas/rojo.png" z-index="1"/>
+						</div>
+
+						<div>
+							<img id="verde"
+								style="position:relative;top:-150px;left:450px;border:none" 
+								width="50" height="50"  src="images/fichas/verde.png" z-index="1"/>
+						</div>
+
+						<div>
+							<img id="azul"
+								style="position:relative;top:-200px;left:450px;border:none" 
+								width="50" height="50"  src="images/fichas/azul.png" z-index="3"/>
+						</div>
+						<div>
+							<img id="amarillo"
+								style="position:relative;top:-250px;left:450px;border:none" 
+								width="50" height="50"  src="images/fichas/amarillo.png" z-index="4"/>
+						</div>
+						<div>
+							<img id="violeta"
+								style="position:relative;top:-300px;left:450px;border:none" 
+								width="50" height="50"  src="images/fichas/violeta.png" z-index="5"/>
+						</div>
+						<div>
+							<img id="blanco"
+								style="position:relative;top:-350px;left:450px;border:none" 
+								width="50" height="50"  src="images/fichas/blanco.png" z-index="6"/>
+						</div>
+						<div>
+							<img id="negro"
+								style="position:relative;top:-400px;left:450px;border:none" 
+								width="50" height="50"  src="images/fichas/negro.png" z-index="7"/>
+						</div>
+						<div>
+							<img id="marron"
+								style="position:relative;top:-450px;left:450px;border:none" 
+								width="50" height="50"  src="images/fichas/marron.png" z-index="8"/>
+						</div>
+
+						<p id="pedir">
+							Nombre: <input type="text" id="nombre" />
+							<button id="pedirBtn" onclick="pedirFicha()" >Pedir Ficha</button>
+						</p>
+
+						<p id="jugadores"></p>
+
+						
+						<div id="ju1"></div>
+						<div id="lanzar"></div>
+						<div id="evento"></div>
+
+						<div id="jugadores"></div>
+<!--	
+						<button id="lanzar" type="button" onclick="lanzar()" hide="true">
+							¡Lanzar!
+						</button>
+-->
+												
+					</div>
+			</div>
+
+		<script>
+			reset()
+
+
+			//setInterval(function(){alert("Hello")},300);
+		</script>
+
+	</body>
+</html>
