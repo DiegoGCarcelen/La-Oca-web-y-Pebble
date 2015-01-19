@@ -255,6 +255,7 @@ var Tablero = function() {
     this.iniciarNormal();
     this.configurarTablero();
     this.iniciarTablero();
+
 }
 
 function Casilla(posicion, tema) {
