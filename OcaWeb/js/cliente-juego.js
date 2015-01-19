@@ -62,7 +62,7 @@ function hayJugadores(){
 
 function reset(){
 	$.getJSON(url + "reset",function(data){
-		$('#partida').append("<p id='fase' >"+"Estás en la fase "+data.fase+"</p>");
+		//$('#partida').append("<p id='fase' >"+"Estás en la fase "+data.fase+"</p>");
 		$('#evento').html("<p id='evento' >"+"</p>");
 	})
 }
@@ -75,9 +75,6 @@ function lanzar(){
 		$('#evento').append("<p id='evento' >"+data.mensaje+"</p>");
 		moverFicha(color,data.posicion);
 	})
-
-	actualizaFichas();
-
 
 }
 
@@ -124,6 +121,7 @@ function mostrarColor(color){
 	//Sockets
 	//socket.emit('listo',color);
 	//esperarAlResto();
+
 	//Pooling
 	intervaloInicio = setInterval("hayJugadores()", 3000);
 }
@@ -135,7 +133,6 @@ function mostrarBotonEmpezar(){
 		turno();
 		intervaloInicio = setInterval("turno()", 3000);
 		clearInterval(intervaloJugadores);
-		intervaloJugadores = setInterval("actualizaFichas()",3000);
 		//Comenzar partida
 		$.getJSON(url+'comenzarPartida',function(data){})
 	})
@@ -184,16 +181,15 @@ function moverFicha(colorPos,casilla){
 	
 	$('#'+colorPos).css({position:"relative",top:(arrayPosiciones[casilla-1][0])-(50*offset),left:arrayPosiciones[casilla-1][1]});
 
-	console.log("Muevo la ficha "+ colorPos +" a la posicion "+ casilla);
+	//console.log("Muevo la ficha "+ colorPos +" a la posicion "+ casilla);
 }
 
+//Asíncrona, no funciona bien, no se utiliza en esta versión
 function actualizaFichas(){
 
 	var i = 0;
 	
 	while(i<numeroJugadores){
-
-		//Asincrona
 		$.getJSON(url+"ju/"+i,function(data){
 			 posiciones[i]=data.pos;
 			 console.log("La casilla es "+ posiciones[i]);
@@ -202,13 +198,6 @@ function actualizaFichas(){
 			moverFicha(colores[i],posiciones[i]);
 		i++;
 	}
-
-	i=0;
-
-	
-	setTimeout(function(){
-		
-		}, 3000)
 
 }
 
