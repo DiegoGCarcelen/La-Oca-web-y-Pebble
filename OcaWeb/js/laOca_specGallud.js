@@ -8,7 +8,7 @@ describe("El juego de la Oca...",function(){
 	describe("En cuanto a la inicialización",function(){
 		beforeEach(function(){
 			colores=["rojo","azul"];
-			this.juego = (new LaOcaFactory(colores)).crearJuego();
+			this.juego=(new LaOcaFactory(colores)).crearJuego();
 		});
 
 		it("...la variable juego debe estar definida",function(){

@@ -67,6 +67,7 @@ function reset(){
 	})
 }
 
+
 function lanzar(){
 
 	$.getJSON(url+"lanzar/"+color,function(data){

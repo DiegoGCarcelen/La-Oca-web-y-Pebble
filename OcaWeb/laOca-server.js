@@ -107,20 +107,12 @@ app.listen(app.get('port'), function() {
 
 function iniJuego(){
 
-	//if(juego == undefined){
 
-		colores=["rojo","azul","verde","amarillo","violeta","negro","blanco","marron"];
-		juego = (new modulo.LaOcaFactory(colores)).crearJuego();
-		jugador = undefined;
+	colores=["rojo","azul","verde","amarillo","violeta","negro","blanco","marron"];
+	juego = (new modulo.LaOcaFactory(colores)).crearJuego();
+	jugador = undefined;
 
-		console.log("Juego Reseteado");		
-
-	//}
-	//else{
-	
-	//	console.log("Ha entrado jugador 2");
-	//}
-
+	console.log("Juego Reseteado");		
 }
 
 app.get("/",function(request,response){
